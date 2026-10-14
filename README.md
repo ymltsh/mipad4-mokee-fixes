@@ -4,14 +4,17 @@
 
 ## 下载
 
+最新发布：[v1.1.0](https://github.com/ymltsh/mipad4-mokee-fixes/releases/tag/v1.1.0)，新增独立亮度服务标签修复；原整合模块仍只包含锁屏和桌面两项。
+
 | 包 | 用途 |
 | --- | --- |
 | [整合 Magisk 模块](downloads/MiPad4-MoKee-Fixes-v1.0.0.zip) | 锁屏旋转 + 原桌面底部 Dock |
 | [锁屏旋转模块](downloads/MiPad4-Lockscreen-Rotation-v1.0.0.zip) | 只启用锁屏旋转 |
 | [桌面底栏模块](downloads/MiPad4-Lawnchair-BottomDock-v1.0.0.zip) | 只修复原桌面横屏 Dock |
-| [源码与模块合集](downloads/mipad4-mokee-fixes-source-v1.0.0.zip) | 文档、源码、构建脚本、上述三包 |
+| [严格模式亮度模块](downloads/MiPad4-Light-HAL-Label-Fix-v1.0.0.zip) | 修复原亮度服务 SELinux 标签 |
+| [源码与模块合集](downloads/mipad4-mokee-fixes-source-v1.1.0.zip) | 文档、源码、构建脚本、全部独立模块及旧整合包 |
 
-进入文件页面后点击 **Raw / Download raw file** 下载。前三个 ZIP 在 Magisk App 中安装；源码与模块合集不是可直接安装的 Magisk 模块。
+进入文件页面后点击 **Raw / Download raw file** 下载。各功能模块 ZIP 在 Magisk App 中安装；源码与模块合集不是可直接安装的 Magisk 模块。
 
 ## 适用环境
 
@@ -24,7 +27,7 @@
 ## 安装与回滚
 
 1. 保留可用 ADB / TWRP，备份桌面布局。在 Magisk App 选择所需 ZIP 安装。
-2. **整合模块与独立模块二选一**。若已安装本项目两项独立模块，先禁用它们，再安装整合模块。
+2. **布局整合模块与两项布局独立模块二选一**；亮度模块可同时使用。若已安装本项目两项布局独立模块，先禁用它们，再安装整合模块。
 3. 重启。保持自动旋转开启，在锁屏和桌面分别横放、竖放检查。
 4. 回滚时在 Magisk 中禁用对应模块，再重启；不会清空桌面数据库。
 
@@ -39,6 +42,8 @@
 - 资源覆盖 APK 位于 Magisk 模块的 `system/product/overlay/`。它没有 DEX 代码，原桌面 APK、签名、包名和动画代码保持不变。
 - 不直接写入 system / product，不刷 boot，不更换 Launcher，不调整屏幕密度。
 
+严格模式下系统亮度失效的原因、验证和回滚见 [亮度 SELinux 修复说明](docs/brightness-selinux.md)。此模块不改变全局 SELinux 模式，可与原布局模块同时使用。
+
 Zygisk 的 ADB 认证故障不能用通用公钥模块解决，见 [Zygisk 与 ADB 排障记录](docs/zygisk-adb.md)。
 
 ## 验证范围
@@ -49,7 +54,7 @@ Zygisk 的 ADB 认证故障不能用通用公钥模块解决，见 [Zygisk 与 A
 
 ## 源码与构建
 
-`modules/` 为模块目录，`overlay-src/` 为资源 APK 的完整源码，`tools/build.py` 从源码构建资源 APK 并重新打包。需要 Python 3、JDK 17+ 和从目标 Android 10 设备取得的 `framework-res.apk`：
+`modules/` 为模块目录，`overlay-src/` 为资源 APK 的完整源码，`tools/build.py` 从源码构建资源 APK 并重新打包四个模块 ZIP。需要 Python 3、JDK 17+ 和从目标 Android 10 设备取得的 `framework-res.apk`：
 
 ```powershell
 adb -s <设备序列号> pull /system/framework/framework-res.apk framework-res.apk

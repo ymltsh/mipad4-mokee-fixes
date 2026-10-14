@@ -1,0 +1,6 @@
+id=mipad4_light_hal_label_fix
+name=Mi Pad 4 Light HAL SELinux Label Fix
+version=1.0.0
+versionCode=10000
+author=Local
+description=Restore the original clover light HAL execution label and domain without adding allow rules or changing global SELinux mode.
