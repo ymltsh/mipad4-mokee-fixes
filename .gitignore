@@ -1,0 +1,7 @@
+.build/
+framework-res.apk
+*.p12
+*.jks
+adbkey*
+*backup*
+*.log

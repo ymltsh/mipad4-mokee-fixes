@@ -1,0 +1,6 @@
+id=mipad4_lawnchair_bottomdock
+name=Mi Pad 4 Lawnchair Bottom Dock
+version=1.0.0
+versionCode=10000
+author=Local
+description=Keep the built-in Lawnchair dock at the bottom in landscape with a resource-only overlay.

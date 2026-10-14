@@ -1,0 +1,6 @@
+id=mipad4_mokee_fixes
+name=Mi Pad 4 MoKee Fixes
+version=1.0.0
+versionCode=10000
+author=Local
+description=Enable lockscreen rotation and keep the original Lawnchair landscape dock at the bottom.

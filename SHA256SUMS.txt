@@ -1,0 +1,4 @@
+dafb54a136e93f276c64470ac35595d338d2c31d6235ba3694da94c22c165f77  downloads/MiPad4-Lockscreen-Rotation-v1.0.0.zip
+18d6e72c7439226953edf13d98432d754b20dcebb3cc6e13d04a1facdecdab3f  downloads/MiPad4-Lawnchair-BottomDock-v1.0.0.zip
+cb2e5c9a9eef020220c993ca973820d476b1175f85df6488b811935600e68f8b  downloads/MiPad4-MoKee-Fixes-v1.0.0.zip
+d6718ca262bbbcc5ec8ae1f577f01a0e1d7e47bd62e524ae01b50106dfdee6d8  downloads/mipad4-mokee-fixes-source-v1.0.0.zip
