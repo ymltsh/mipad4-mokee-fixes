@@ -1,4 +1,4 @@
-"""Build the resource-only overlay and the four Magisk ZIPs (Windows)."""
+"""Build the resource-only overlay and the Magisk ZIPs (Windows)."""
 from pathlib import Path
 import argparse
 import hashlib
@@ -12,6 +12,7 @@ ROOT = Path(__file__).resolve().parents[1]
 APKTOOL_URL = 'https://github.com/iBotPeaches/Apktool/releases/download/v3.0.3/apktool_3.0.3.jar'
 APKTOOL_SHA256 = 'dbf930b076c6b9be08d57c449cacefc3bdd6b71ebd59b3066fc0e1f5b14f9423'
 PACKAGES = {
+    'selinux-fixes': 'MiPad4-SELinux-Fixes-Combined-v1.0.0.zip',
     'light-hal-label-fix': 'MiPad4-Light-HAL-Label-Fix-v1.0.0.zip',
     'lockscreen-rotation': 'MiPad4-Lockscreen-Rotation-v1.0.0.zip',
     'bottom-dock': 'MiPad4-Lawnchair-BottomDock-v1.0.0.zip',
@@ -93,7 +94,7 @@ def main():
     sums = '\n'.join(hashlib.sha256((downloads / name).read_bytes()).hexdigest()
                      + '  downloads/' + name for name in PACKAGES.values())
     (ROOT / 'SHA256SUMS.txt').write_text(sums + '\n', encoding='utf-8', newline='\n')
-    print('Built resource APK and four Magisk ZIPs. SHA256SUMS.txt refreshed.')
+    print('Built resource APK and Magisk ZIPs. SHA256SUMS.txt refreshed.')
 
 
 if __name__ == '__main__':

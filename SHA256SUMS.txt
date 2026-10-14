@@ -2,5 +2,7 @@
 6f5bdd5c94119b5f51b684a83275b26af10fa4bbb1432da6b3b71d3029789343  downloads/MiPad4-Light-HAL-Label-Fix-v1.0.0.zip
 dafb54a136e93f276c64470ac35595d338d2c31d6235ba3694da94c22c165f77  downloads/MiPad4-Lockscreen-Rotation-v1.0.0.zip
 cb2e5c9a9eef020220c993ca973820d476b1175f85df6488b811935600e68f8b  downloads/MiPad4-MoKee-Fixes-v1.0.0.zip
+17bea2a18c57e314b9616f710834de523941c09f85d4b231be087a014a2a64e7  downloads/MiPad4-SELinux-Fixes-Combined-v1.0.0.zip
 d6718ca262bbbcc5ec8ae1f577f01a0e1d7e47bd62e524ae01b50106dfdee6d8  downloads/mipad4-mokee-fixes-source-v1.0.0.zip
 4e8e7f66536299bf878fbbda3fe511264720a136c514bb1177bb648d2060a546  downloads/mipad4-mokee-fixes-source-v1.1.0.zip
+afe0a62c390b6146167f76554c3b1eeead09d8044183e6081e412ac04a6d7851  downloads/mipad4-mokee-fixes-source-v1.2.0.zip

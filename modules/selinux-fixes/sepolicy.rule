@@ -1,0 +1,10 @@
+allow folio_daemon uhid_device chr_file { open write ioctl }
+allow folio_daemon binder_device chr_file { read write open ioctl map getattr }
+allow folio_daemon servicemanager binder call
+allow folio_daemon sensorservice_service service_manager find
+allow folio_daemon system_server binder call
+allow folio_daemon permission_service service_manager find
+allow system_server folio_daemon binder transfer
+allow folio_daemon system_server binder transfer
+allow folio_daemon system_server fd use
+allow folio_daemon system_server unix_stream_socket { read write }

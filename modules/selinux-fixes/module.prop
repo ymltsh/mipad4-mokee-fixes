@@ -1,0 +1,6 @@
+id=mipad4_selinux_fixes
+name=Mi Pad 4 SELinux Fixes (Light + Folio + Late Enforcing)
+version=1.0.0
+versionCode=10000
+author=Local
+description=Restore light HAL labels, repair folio sensor/input permissions, and switch once to Enforcing 30 seconds after boot completion.
